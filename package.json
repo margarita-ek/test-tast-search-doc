@@ -1,0 +1,33 @@
+{
+  "name": "test-search-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "client:build": "npm run build --prefix client",
+    "server:start": "cross-env NODE_ENV=production node app.js",            
+    "client": "npm start --prefix client",
+    "server": "nodemon app.js",
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "mongodb": "^4.9.1",
+    "mongoose": "^6.6.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.4.0",
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.19"
+  },
+  "engines": {
+    "node": "14.17.0"
+  }
+}
